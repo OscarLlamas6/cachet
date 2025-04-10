@@ -32,7 +32,7 @@
                         <a href="{{ cachet_route('dashboard.incidents.updates.edit', ['incident' => $incident->id, 'incident_update' => $update]) }}" class="btn btn-default">
                             {{ trans('forms.edit') }}
                         </a>
-                        <a href="#" class="btn btn-danger confirm-action" data-method='DELETE' data-confirm="{{ trans('dashboard.incidents.updates.delete.confirm') }}" data-action-url="{{ cachet_route('dashboard.incidents.updates.delete', ['incident' => $incident->id, 'incident_update' => $update]) }}">
+                        <a href="#" class="btn btn-danger confirm-action" data-method='DELETE' data-confirm="{{ trans('dashboard.incidents.updates.delete.confirm') }}" data-action-url="{{ cachet_route('delete:dashboard.incidents.updates.delete', ['incident' => $incident->id, 'incident_update' => $update]) }}">
                             {{ trans('forms.delete') }}
                         </a>
                     </div>
