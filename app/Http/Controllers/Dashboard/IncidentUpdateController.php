@@ -169,4 +169,20 @@ class IncidentUpdateController extends Controller
         return cachet_redirect('dashboard.incidents.updates', ['incident' => $incident->id])
             ->withSuccess(sprintf('%s %s', trans('dashboard.notifications.awesome'), trans('dashboard.incidents.updates.edit.success')));
     }
+
+    /**
+     * Delete an incident update.
+     *
+     * @param \CachetHQ\Cachet\Models\Incident       $incident
+     * @param \CachetHQ\Cachet\Models\IncidentUpdate $incidentUpdate
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function deleteIncidentUpdateAction(Incident $incident, IncidentUpdate $incidentUpdate)
+    {
+        $incidentUpdate->delete();
+
+        return cachet_redirect('dashboard.incidents.updates', ['incident' => $incident->id])
+            ->withSuccess(sprintf('%s %s', trans('dashboard.notifications.awesome'), trans('dashboard.incidents.updates.delete.success')));
+    }
 }

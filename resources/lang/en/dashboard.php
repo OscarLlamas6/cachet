@@ -34,6 +34,11 @@ return [
                 'success' => 'The incident update has been updated.',
                 'failure' => 'Something went wrong updating the incident update',
             ],
+            'delete' => [
+                'confirm' => 'Are you sure you want to delete this update?',
+                'success' => 'The incident update has been deleted.',
+                'failure' => 'The incident update could not be deleted.',
+            ],
         ],
         'reported_by'              => 'Reported :timestamp by :user',
         'add'                      => [

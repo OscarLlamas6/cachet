@@ -89,6 +89,11 @@ class IncidentRoutes
                 'as'   => 'post:dashboard.incidents.updates.edit',
                 'uses' => 'IncidentUpdateController@editIncidentUpdateAction',
             ]);
+
+            $router->delete('{incident}/updates/{incident_update}', [
+                'as'   => 'delete:dashboard.incidents.updates.delete',
+                'uses' => 'IncidentUpdateController@deleteIncidentUpdateAction',
+            ]);
         });
     }
 }
